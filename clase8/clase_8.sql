@@ -1,127 +1,146 @@
--- CLASE 9 VISTAS
--- LINK PRESENTACION :https://docs.google.com/presentation/d/1b_wHzuafrgLYXe4ZUFbv_mIpkgAzDhaA/edit?usp=sharing&ouid=117801297684850401127&rtpof=true&sd=true
+-- TIPOS DE TABLA
+
+1. **MyISAM**:
+   - Es el motor de almacenamiento predeterminado en versiones antiguas de MySQL.
+   - Ofrece una alta velocidad y eficiencia en las operaciones de lectura.
+   - No soporta transacciones ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad) ni claves foráneas.
+   - Es adecuado para aplicaciones que requieren un alto rendimiento en operaciones de lectura, como sitios web estáticos o aplicaciones de análisis de datos.
+
+2. **MEMORY**:
+   - Almacena toda la tabla en la memoria RAM del servidor.
+   - Es extremadamente rápido para operaciones de lectura y escritura, ya que no implica acceso a disco.
+   - Ideal para tablas temporales o pequeñas tablas de caché que necesitan un acceso rápido a los datos.
+
+3. **InnoDB y BDB**:
+   - Son motores de almacenamiento transaccionales que cumplen con el estándar ACID.
+   - Soportan claves foráneas y ofrecen características como bloqueo a nivel de fila para mejorar la concurrencia.
+   - InnoDB es el motor de almacenamiento predeterminado en MySQL desde la versión 5.5.
+   - BDB (BerkeleyDB) fue otro motor transaccional disponible en versiones anteriores, pero ha sido descontinuado en versiones recientes.
+
+4. **EXAMPLE**:
+   - Es un motor de almacenamiento simple que se utiliza principalmente para propósitos de prueba o demostración.
+   - No es adecuado para entornos de producción debido a su falta de funcionalidades avanzadas y su bajo rendimiento.
+
+5. **NDB Cluster**:
+   - Es un motor de almacenamiento diseñado para MySQL Cluster, una solución de base de datos distribuida y altamente disponible.
+   - Proporciona escalabilidad horizontal y alta disponibilidad al distribuir los datos en varios nodos.
+
+6. **ARCHIVE**:
+   - Está optimizado para tablas de tipo de registro, donde la mayoría de las operaciones son de lectura y escritura se realiza de forma esporádica.
+   - Ofrece una compresión eficiente de datos para ahorrar espacio en disco.
+   - No es adecuado para tablas con muchas operaciones de actualización o eliminación.
+
+7. **CSV**:
+   - Almacena los datos en formato CSV (valores separados por comas), lo que permite importar y exportar fácilmente datos desde y hacia archivos CSV.
+   - Es útil para integrar datos de MySQL con otras aplicaciones que trabajan con archivos CSV.
+
+8. **FEDERATED**:
+   - Permite acceder y manipular datos en una base de datos remota como si estuvieran en una tabla local.
+   - Facilita la integración y la federación de datos entre múltiples servidores de bases de datos MySQL.
+
+Cada tipo de motor de almacenamiento tiene sus propias características y casos de uso específicos, por lo que es importante elegir el más adecuado según los requisitos y el diseño de la aplicación.
 
 
--- UNA VISTA EN SQL ALMACENA UNA QUERY
+-- FACT TABLES
+-- TRANSAC TABLES
+-- DIMENSION TABLES
 
--- UNA VISTA ALMACENADA ALMACENA UNA QUERY JUNTO A LA DATA
-
--- LINK https://sqlearning.com/es/elementos-avanzados/view/
-
--- LINK VIEW https://dev.mysql.com/doc/refman/8.0/en/create-view.html
-
-
--- TEORIA ADICIONAL
--- Las vistas en MySQL son consultas almacenadas que se comportan como tablas virtuales. Esto significa que puedes crear una vista que represente una consulta compleja o comúnmente utilizada, y luego consultarla como si fuera una tabla real en tu base de datos. Las vistas proporcionan una capa de abstracción sobre los datos subyacentes, lo que facilita el acceso y la manipulación de los datos.
-
--- Aquí tienes un ejemplo de cómo crear y utilizar una vista en MySQL:
-
--- Supongamos que tenemos una base de datos que almacena información sobre empleados, con una tabla llamada `empleados` que tiene las siguientes columnas: `id`, `nombre`, `apellido`, `puesto` y `salario`.
-
--- Primero, crearemos una vista que muestre los nombres y apellidos de los empleados junto con sus puestos:
-
--- ```sql
--- CREATE VIEW vista_empleados AS
--- SELECT nombre, apellido, puesto
--- FROM empleados;
--- ```
-
--- Ahora que hemos creado la vista, podemos consultarla como si fuera una tabla:
-
--- ```sql
--- SELECT * FROM vista_empleados;
--- ```
-
--- Esta consulta devolverá los nombres, apellidos y puestos de todos los empleados en la base de datos, pero detrás de escena, MySQL estará ejecutando la consulta definida en la vista.
-
--- Las vistas son especialmente útiles cuando necesitas acceder a datos complejos o realizar operaciones repetitivas en tu base de datos. Además, proporcionan una capa de seguridad adicional al limitar el acceso directo a las tablas subyacentes y permitir un control más fino sobre quién puede ver qué datos.
+-- FOREIGN KEY
+-- CANDIDATE AND CONCATENATE KEYS
 
 
+**Temario: Tablas en Bases de Datos**
 
--- Ejemplos
---     Creacion de vista
---     Actualizacion de una vista
---     Eliminacion de una vista
+**1. Tipos de Tabla:**
+   - Tablas Temporales
+   - Tablas Permanentes
+   - Tablas Virtuales
 
+**2. Fact Tables (Tablas de Hechos):**
+   - Definición
+   - Características
+   - Ejemplos de Uso
+   - Relación con el Modelo de Estrella y Copo de Nieve
 
+**3. Transac Tables (Tablas de Transacciones):**
+   - Definición
+   - Propósito
+   - Ejemplos de Uso
+   - Relación con el Seguimiento de Transacciones y Auditorías
 
--- Un poco de ptractica
+**4. Dimension Tables (Tablas de Dimensiones):**
+   - Definición
+   - Características
+   - Ejemplos de Dimensiones Comunes (Tiempo, Producto, Ubicación)
+   - Relación con el Modelo de Estrella y Copo de Nieve
 
-    -- Muestre first_name y last_name de los usuarios que tengan mail 'webnode.com'
-    SELECT 
-            first_name
-        ,   last_name
---      ,   email
-        FROM coderhouse_gamers.SYSTEM_USER
-    WHERE email LIKE '%webnode.com' ; 
+**5. Foreign Key (Clave Externa):**
+   - Definición
+   - Propósito
+   - Ejemplos de Implementación
+   - Relación con la Integridad Referencial
 
-    -- Muestre todos los datos de los juegos que han finalizado, los usuarios con email de 'myspace'.
+**6. Candidate and Concatenate Keys (Claves Candidatas y Concatenadas):**
+   - Definición de Clave Candidata
+   - Definición de Clave Concatenada
+   - Diferencias entre Claves Candidatas y Concatenadas
+   - Ejemplos de Uso
 
+---
 
-    SELECT 
-       G.*
-    FROM coderhouse_gamers.PLAY AS P
-    RIGHT JOIN coderhouse_gamers.SYSTEM_USER AS SU
-        ON P.id_system_user = SU.id_system_user
-    RIGHT JOIN coderhouse_gamers.GAME AS G
-        ON G.id_game = P.id_game
-    WHERE TRUE
-    AND P.completed = 1
-    AND SU.email LIKE '%@myspace.com';
+**Explicación de los Puntos:**
 
+**Tipos de Tabla:**
+Las tablas en bases de datos pueden clasificarse en temporales, que se crean y eliminan durante la ejecución de un programa o proceso; permanentes, que persisten en la base de datos incluso después de cerrar la conexión; y virtuales, que son el resultado de una consulta o cálculo y no se almacenan físicamente en la base de datos.
 
-    -- Muestre los distintos juegos que tuvieron una votación mayor a 9.
+**Fact Tables (Tablas de Hechos):**
+Son tablas que almacenan datos cuantificables y específicos que se pueden medir, generalmente en el contexto de un proceso de negocio o un evento. Son centrales en un modelo de datos dimensional, como el modelo de estrella y copo de nieve, y contienen métricas clave que se analizan en conjunto con las dimensiones.
 
+**Transac Tables (Tablas de Transacciones):**
+Estas tablas registran eventos individuales o transacciones que ocurren en un sistema. Son fundamentales para el seguimiento de cambios y la auditoría, ya que contienen información detallada sobre quién hizo qué y cuándo en la base de datos.
 
-    SELECT  
-        name
-    FROM coderhouse_gamers.GAME
-    WHERE id_game IN
-        (
-            SELECT 
-            DISTINCT id_game
-            FROM coderhouse_gamers.VOTE
-            WHERE
-                value > 9
-        )
-    ;
+**Dimension Tables (Tablas de Dimensiones):**
+Son tablas que contienen descripciones textuales o contextuales de los datos en las fact tables. Por lo general, contienen atributos que proporcionan contexto a las métricas almacenadas en las fact tables y son utilizadas para filtrar, agrupar o agregar datos.
 
+**Foreign Key (Clave Externa):**
+Una foreign key es un campo (o campos) en una tabla que hace referencia a la primary key de otra tabla. Se utiliza para establecer una relación entre dos tablas y garantizar la integridad referencial en la base de datos. La foreign key garantiza que los valores en la columna referenciada existan en la tabla principal.
 
-    -- Muestre nombre, apellido y mail de los usuarios que juegan al juego FIFA 22.
-
-        -- <JOINS VERSION> -- 
-            SELECT 
-                SU.first_name AS nombre,
-                SU.last_name AS apellido,
-                SU.email AS mail
-            FROM coderhouse_gamers.SYSTEM_USER AS SU
-            JOIN coderhouse_gamers.PLAY AS P 
-                ON SU.id_system_user = P.id_system_user
-            JOIN coderhouse_gamers.GAME AS G 
-                ON P.id_game = G.id_game
-            WHERE G.name LIKE '%FIFA 22%';
-
-        -- <SUBQUERY VERSION> -- 
-            SELECT 
-                SU.first_name   AS  nombre
-            ,   SU.last_name    AS  apellido
-            ,   SU.email        AS  mail
-            FROM coderhouse_gamers.SYSTEM_USER AS SU
-            WHERE id_system_user IN
-                (
-                SELECT 
-                    id_system_user
-                FROM coderhouse_gamers.PLAY AS P
-                WHERE EXISTS
-                    (SELECT 
-                        id_game
-                    FROM coderhouse_gamers.GAME AS G
-                    WHERE G.id_game = P.id_game
-                    AND G.name like '%FIFA 22%'));
+**Candidate and Concatenate Keys (Claves Candidatas y Concatenadas):**
+Una clave candidata es un conjunto de uno o más campos que pueden ser claves primarias potenciales para una tabla. Una clave concatenada es una clave primaria que consta de la combinación de dos o más campos. Las claves candidatas son candidatas a ser claves primarias, mientras que las claves concatenadas son claves primarias compuestas.
 
 
--- PARA  VERIFICAR LA PERFORMANCIA
+-- 
 
-    -- SET profiling = 1;
-    -- SHOW PROFILES;
-    -- SHOW PROFILE FOR QUERY <Query_ID>;
+Ejemplo de tablas dimensionales 
+Ejemplo de tablas de hechos
+
+Identificar en el modelo de una applicacion de reservas las tablas que serían de hecho y las que son dimensionales: 
+
+-- Presentar el modelo en el respositorio
+-- LINK: https://github.com/Andru-1987/53175-sql/blob/main/proyecto_reservas_db/ddl_reservas_app.sql
+
+-- Dar informacion sobre la relacion cardinal de RESTAURANTE -- DUEÑO
+
+-- Data extra: 
+La integridad relacional en MySQL se refiere a la garantía de que las relaciones entre las tablas en una base de datos se mantienen consistentes y que no se producen acciones que puedan comprometer la integridad de los datos. MySQL proporciona varias herramientas y mecanismos para implementar y mantener la integridad relacional en una base de datos:
+
+    Constraints (Restricciones): MySQL permite definir diferentes tipos de restricciones para mantener la integridad de los datos, incluyendo:
+        PRIMARY KEY: Define un campo o conjunto de campos como clave primaria, asegurando que los valores sean únicos e indexados.
+        FOREIGN KEY: Establece una relación entre dos tablas, garantizando que los valores en la columna referenciada existan en la tabla principal.
+        UNIQUE: Asegura que los valores en una columna o conjunto de columnas sean únicos.
+        NOT NULL: Evita que los valores en una columna sean nulos, asegurando que siempre contengan datos.
+
+    Triggers (Disparadores): Los triggers son bloques de código SQL que se ejecutan automáticamente cuando ocurren ciertos eventos, como inserciones, actualizaciones o eliminaciones en una tabla. Se pueden utilizar para realizar validaciones adicionales o acciones específicas para mantener la integridad de los datos.
+
+    Transactions (Transacciones): MySQL soporta transacciones, que permiten agrupar una serie de operaciones SQL en una unidad lógica de trabajo. Las transacciones garantizan la atomicidad, consistencia, aislamiento y durabilidad (propiedades ACID), lo que ayuda a mantener la integridad de los datos durante operaciones complejas que afectan a múltiples tablas.
+
+    Foreign Key Constraints (Restricciones de Clave Externa): MySQL permite definir restricciones de clave externa utilizando la sintaxis FOREIGN KEY, lo que garantiza que los valores en una columna de una tabla (clave externa) hagan referencia a los valores existentes en otra tabla (clave primaria).
+
+    Índices (Indexes): Los índices en MySQL pueden mejorar el rendimiento de las consultas, pero también pueden utilizarse para garantizar la integridad de los datos al imponer restricciones únicas o de clave primaria en una tabla.
+
+
+
+-- Integridad referencial:
+-- LINK : https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html
+
+

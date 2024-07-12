@@ -1,0 +1,101 @@
+﻿crash_date,borough,zip_code,vehicle,vehicle_type
+9/11/2021,,,Sedan,Sedan
+3/26/2022,,,Sedan,
+6/29/2022,,,Sedan,Pick-up Truck
+9/11/2021,BROOKLYN,11208,Sedan,
+12/14/2021,BROOKLYN,11233,,
+4/14/2021,,,Dump,Sedan
+12/14/2021,,,Sedan,Tractor Truck Diesel
+12/14/2021,BRONX,10475,Sedan,Sedan
+12/14/2021,BROOKLYN,11207,Sedan,
+12/14/2021,MANHATTAN,10017,Sedan,Station Wagon/Sport Utility Vehicle
+12/13/2021,,,Station Wagon/Sport Utility Vehicle,
+12/14/2021,QUEENS,11413,Sedan,Station Wagon/Sport Utility Vehicle
+12/14/2021,,,Station Wagon/Sport Utility Vehicle,Sedan
+12/14/2021,,,Sedan,
+12/14/2021,QUEENS,11434,Sedan,Sedan
+12/14/2021,BROOKLYN,11217,Tanker,Station Wagon/Sport Utility Vehicle
+12/14/2021,BROOKLYN,11226,Sedan,
+12/14/2021,,,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle
+12/11/2021,BRONX,10463,Station Wagon/Sport Utility Vehicle,Sedan
+12/14/2021,,,Station Wagon/Sport Utility Vehicle,Sedan
+12/11/2021,MANHATTAN,10001,Station Wagon/Sport Utility Vehicle,
+12/14/2021,,,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle
+12/13/2021,QUEENS,11372,Sedan,
+12/14/2021,,,Station Wagon/Sport Utility Vehicle,
+12/13/2021,STATEN ISLAND,10301,Sedan,Sedan
+12/14/2021,BROOKLYN,11230,Sedan,
+12/14/2021,BROOKLYN,11215,Sedan,
+12/14/2021,BROOKLYN,11217,Sedan,Bike
+12/14/2021,BROOKLYN,11211,Bus,Station Wagon/Sport Utility Vehicle
+12/14/2021,BRONX,10455,Taxi,
+12/12/2021,QUEENS,11385,Station Wagon/Sport Utility Vehicle,
+12/14/2021,,,Van,Bike
+4/14/2021,,,Bus,
+12/16/2021,,,,
+6/29/2022,,,Motorscooter,Station Wagon/Sport Utility Vehicle
+4/15/2021,,,Station Wagon/Sport Utility Vehicle,
+7/7/2021,,,Sedan,Sedan
+7/12/2022,BROOKLYN,11225,Sedan,
+3/23/2022,,,Bike,
+7/9/2021,,,Bus,
+4/24/2022,,,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle
+4/24/2022,,,Station Wagon/Sport Utility Vehicle,Sedan
+4/22/2022,,,E-Bike,
+4/24/2022,BROOKLYN,11220,Station Wagon/Sport Utility Vehicle,
+4/24/2022,QUEENS,11411,Sedan,Station Wagon/Sport Utility Vehicle
+4/24/2022,BRONX,10452,Taxi,Station Wagon/Sport Utility Vehicle
+4/24/2022,BRONX,10466,Sedan,
+4/15/2022,,,Station Wagon/Sport Utility Vehicle,E-Scooter
+4/24/2022,,,Sedan,
+4/24/2022,BRONX,10453,Sedan,
+3/8/2022,BROOKLYN,11207,Sedan,
+4/24/2022,MANHATTAN,10019,Station Wagon/Sport Utility Vehicle,Bike
+4/22/2022,BROOKLYN,11230,Sedan,Pick-up Truck
+4/24/2022,,,Station Wagon/Sport Utility Vehicle,
+4/24/2022,BROOKLYN,11221,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle
+4/20/2022,,,Sedan,Station Wagon/Sport Utility Vehicle
+4/24/2022,,,Sedan,Sedan
+4/12/2022,BROOKLYN,11203,Station Wagon/Sport Utility Vehicle,
+4/24/2022,,,Sedan,Sedan
+4/24/2022,QUEENS,11419,Sedan,
+4/24/2022,QUEENS,11101,Sedan,Sedan
+4/24/2022,,,Sedan,Station Wagon/Sport Utility Vehicle
+4/24/2022,QUEENS,11106,Sedan,Sedan
+4/24/2022,QUEENS,11418,Ambulance,Station Wagon/Sport Utility Vehicle
+4/7/2022,MANHATTAN,10017,Sedan,Station Wagon/Sport Utility Vehicle
+6/29/2021,,,Station Wagon/Sport Utility Vehicle,E-Bike
+12/9/2021,BROOKLYN,11223,Bike,
+12/9/2021,,,Station Wagon/Sport Utility Vehicle,Sedan
+12/9/2021,QUEENS,11422,Sedan,
+12/6/2021,,,Sedan,
+12/4/2021,BROOKLYN,11213,Sedan,Ambulance
+12/8/2021,MANHATTAN,10128,Taxi,Station Wagon/Sport Utility Vehicle
+12/9/2021,BROOKLYN,11218,Sedan,Bike
+12/1/2021,QUEENS,11692,Sedan,Pick-up Truck
+12/10/2021,QUEENS,11420,Sedan,
+12/7/2021,,,Station Wagon/Sport Utility Vehicle,
+12/9/2021,,,Sedan,Station Wagon/Sport Utility Vehicle
+12/7/2021,BROOKLYN,11205,,
+12/5/2021,BROOKLYN,11212,Sedan,
+12/8/2021,MANHATTAN,10022,Station Wagon/Sport Utility Vehicle,Bike
+12/8/2021,MANHATTAN,10011,Box Truck,Bike
+12/10/2021,,,Garbage or Refuse,Sedan
+12/8/2021,,,Taxi,Station Wagon/Sport Utility Vehicle
+12/8/2021,STATEN ISLAND,10314,Sedan,
+12/8/2021,,,Sedan,
+12/7/2021,,,Sedan,Sedan
+12/8/2021,QUEENS,11101,Sedan,
+12/8/2021,,,Sedan,
+12/10/2021,BRONX,10461,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle
+12/10/2021,,,Station Wagon/Sport Utility Vehicle,Sedan
+12/9/2021,,,Sedan,
+12/8/2021,,,Sedan,Station Wagon/Sport Utility Vehicle
+12/9/2021,QUEENS,11004,Sedan,
+12/9/2021,BROOKLYN,11203,Sedan,Sedan
+3/26/2022,STATEN ISLAND,10301,Sedan,Sedan
+3/26/2022,MANHATTAN,10025,Sedan,Moped
+3/26/2022,QUEENS,11373,Station Wagon/Sport Utility Vehicle,Sedan
+3/26/2022,QUEENS,11411,Station Wagon/Sport Utility Vehicle,Bus
+3/21/2022,MANHATTAN,10018,Motorcycle,Sedan
+3/26/2022,QUEENS,11418,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle

@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: coder123
+    # (this is just an example, not intended to be a production configuration)
+    # ESTO ES LO QUE TIENEN QUE COLOCAR PARA MAPEAR EL PUERTO 3306 | 3307 ...
+    ports:
+      - 3309:3306
+
+# COMANDOS PARA LEVANTARLO
+# docker compose up

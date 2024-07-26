@@ -1,0 +1,4 @@
+USE my_database_change_me;
+
+-- IMPORTANTE PARA QUE ENTIENDA QUE DEBE HACER LA IMPORTACION
+SET GLOBAL local_infile = true;

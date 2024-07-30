@@ -67,6 +67,12 @@ REVOKE ALL PRIVILEGES ON *.* FROM 'nombre_usuario'@'localhost';
 REVOKE ALL PRIVILEGES ON *.* FROM 'juan'@'localhost';
 ```
 
+```sql
+-- permisos absolutos admin
+GRANT ALL PRIVILEGES ON *.* TO 'adriana'@'%' WITH GRANT OPTION;
+```
+
+
 **Actualizacion de privilegios**
 
 ```
